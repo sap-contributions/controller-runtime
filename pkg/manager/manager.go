@@ -193,7 +193,6 @@ func New(config *rest.Config, options Options) (Manager, error) {
 		Namespace:        &options.Namespace,
 		NewCache:         options.NewCache,
 		NewClient:        options.NewClient,
-		DryRunClient:     &options.DryRunClient,
 		EventBroadcaster: options.EventBroadcaster,
 	})
 	if err != nil {

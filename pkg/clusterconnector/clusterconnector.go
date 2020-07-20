@@ -294,10 +294,6 @@ func NewUnmanaged(config *rest.Config, name string, opts ...Option) (ClusterConn
 		return nil, err
 	}
 
-	if *options.DryRunClient {
-		writeObj = client.NewDryRunClient(writeObj)
-	}
-
 	// Create the recorder provider to inject event recorders for the components.
 	// TODO(directxman12): the log for the event provider should have a context (name, tags, etc) specific
 	// to the particular controller that it's being injected into, rather than a generic one like is here.
